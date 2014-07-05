@@ -72,8 +72,8 @@ config = {
   //Library containing string templates
   templatePath: './lib/templates',
   //Files to be copied
-  appPath : './lib/app.js',
-  mindexPath: './lib/mindex.js'
+  appPath : './node_modules/godgavemerest/lib/app.js',
+  mindexPath: './node_modules/godgavemerest/lib/mindex.js'
  /////////////////////////////////
 };
 godgavemerest.run(null);

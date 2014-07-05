@@ -46,7 +46,7 @@ Create empty folder, inith your node js application and install required modules
 npm init
 npm install godgavemerest
 npm install express
-npm install seqeulize
+npm install sequelize
 npm install lodash 
 npm install mysql
 ```

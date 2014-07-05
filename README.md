@@ -76,7 +76,7 @@ config = {
   mindexPath: './node_modules/godgavemerest/lib/mindex.js'
  /////////////////////////////////
 };
-godgavemerest.run(null);
+godgavemerest.run(config);
 
 }).call(this)
 ```

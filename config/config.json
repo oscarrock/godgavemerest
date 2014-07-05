@@ -1,0 +1,16 @@
+{
+    "database": "domidb",
+    "user": "domidb",
+    "password": "Domidb123!",
+    "host": "domidb.db.8800187.hostedresource.com",
+    "dbPort": 3306,
+    "dialect": "mysql",
+    "schema": "domidb",
+    "modelsPath": "./models/",
+    "routesPath": "./routes/",
+    "serverPath": "./",
+    "configPath": "./config/",
+    "templatePath": "./lib/templates",
+    "appPath": "./lib/app.js",
+    "mindexPath": "./lib/mindex.js"
+}

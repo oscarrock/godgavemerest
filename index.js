@@ -22,31 +22,31 @@ module.exports = {
             var getDirName = require('path').dirname;
             //var async = require('async');
             var ncp = require('ncp');
-       
-            if(config === null)
-            {
-              config = { 
-                    //Setup your Database Connection
-                   database: 'mydb', 
-                    user: 'myuser', 
-                    password: 'myPwd111',
-                    host: 'yourhost.com',
-                    dbPort: 3306,
-                    dialect: 'mysql',
-                    schema: 'myschema',
-                    modelsPath : './models/',
-                    routesPath : './routes/',
-                    serverPath: './', //Root of dir
-                    configPath: './config/',
-                    templatePath: './lib/templates',
-                    appPath : './lib/app.js',
-                    mindexPath: './lib/mIndex.js',
-                  };
-            }
+     
+//            if(config === null) //This is for personal debugging.
+//            {
+//              config = { 
+//                    //Setup your Database Connection
+//                   database: 'mydb', 
+//                    user: 'myuser', 
+//                    password: 'myPwd111',
+//                    host: 'yourhost.com',
+//                    dbPort: 3306,
+//                    dialect: 'mysql',
+//                    schema: 'myschema',
+//                    modelsPath : './models/',
+//                    routesPath : './routes/',
+//                    serverPath: './', //Root of dir
+//                    configPath: './config/',
+//                    templatePath: './lib/templates',
+//                    appPath : './lib/app.js',
+//                    mindexPath: './lib/mIndex.js',
+//                  };
+//            }
             
-           // module.exports = config;
+            module.exports = config;
            
-             var templates = require(config.templatePath);
+            var templates = require(config.templatePath);
            
             var connection = mysql.createConnection(
                     {
@@ -63,13 +63,22 @@ module.exports = {
             connection.connect();
             
             mkdirp(config.modelsPath, function(err) {
-                showError(err);
+                if(err)
+                    showError(err);
+                else
+                    console.log(config.modelsPath + ' created...')
             });
             mkdirp(config.routesPath, function(err) {
-                showError(err);
+                if(err)
+                    showError(err);
+                else
+                    console.log(config.routesPath + ' created...')
             });
              mkdirp(config.configPath, function(err) {
-                showError(err);
+                if(err)
+                    showError(err);
+                else
+                    console.log(config.configPath + ' created...')
             });
             
             copyFiles(config.appPath, config.serverPath + 'app.js');
@@ -82,7 +91,6 @@ module.exports = {
     
     function beginMapping()
     {
-        //console.log('begginMapping...' + templates.tablesQuery);
         templates.tablesQuery = util.format( templates.tablesQuery , config.schema);
         connection.query(templates.tablesQuery, function(err, rows, fields) {
             if (err)
@@ -99,7 +107,6 @@ module.exports = {
                 createEntity(query, tablename);
             }
             writeFile(templates.routeTemplateHeader + routesOutput, config.routesPath, 'routeConfig.js');
-            console.log('check /routeConfig.js to check generated routes');
             writeFile(routeIndex, config.routesPath, 'index.js');
         });
     }
@@ -112,7 +119,6 @@ module.exports = {
         if (err) {
           return showError(err);
         }
-        console.log('copy success! ' + destination);
        });
     }
     
@@ -197,12 +203,12 @@ module.exports = {
                 if (err) {
                     showError(err);
                 } else {
-                    console.log("fileSaved: " + filename);
+                    console.log("Created: " +  path + filename);
                 }
             });
         });
     }
-
+   
     function formatRowFieldWithType(type, field, key)
     {
         var rowFormated = '';

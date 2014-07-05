@@ -2,20 +2,23 @@
 var godgavemerest = require('./index')
 config = { 
   //Setup your Database Connection
-  database: 'mydb', 
-  user: 'myuser', 
-  password: 'myPwd111',
-  host: 'yourhost.com',
+  database: 'domidb', 
+  user: 'domidb', 
+  password: 'Domidb123!',
+  host: 'domidb.db.8800187.hostedresource.com',
   dbPort: 3306,
   dialect: 'mysql',
   schema: 'domidb',
+  //Do not change this directories
   modelsPath : './models/',
   routesPath : './routes/',
-  serverPath: './', //Root of dir
-  confiPath: './config/',
+  serverPath : './', 
+  configPath  : './config/',
+  //Library containing string templates
   templatePath: './lib/templates',
-  appPath : './lib/app',
-  modelIndexPath: './lib/modeIndex',
+ //Files to be copied
+  appPath : './lib/app.js',
+  mindexPath: './lib/mindex.js'
 };
 godgavemerest.run(config);
 

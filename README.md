@@ -1,5 +1,7 @@
-#godgavemerest (Sequelize Automapping and Rest server Generator with Express)
-=============
+#godgavemerest
+==============
+
+(Rest Server Generator using Express and Sequelize)
 
 I have build a small node script to generate all files and folders to get up a 
 rest server running with cero configuration. If you are lazy like me and don't 
@@ -48,16 +50,20 @@ config = {
   user: 'myuser', 
   password: 'myPwd111',
   host: 'yourhost.com',
+  schema: 'yourschema',
   dbPort: 3306,
   dialect: 'mysql',
-  schema: 'domidb',
+  //Do not change this - ////////
   modelsPath : './models/',
   routesPath : './routes/',
-  serverPath: './', //Root of dir
-  confiPath: './config/',
+  serverPath : './', 
+  configPath  : './config/',
+  //Library containing string templates
   templatePath: './lib/templates',
-  appPath : './lib/app',
-  modelIndexPath: './lib/modeIndex',
+  //Files to be copied
+  appPath : './lib/app.js',
+  mindexPath: './lib/mindex.js'
+ /////////////////////////////////
 };
 godgavemerest.run(null);
 
@@ -75,7 +81,7 @@ Then you will like to run your server with:
 
 ``` node app.js ```
 
-Browse http://localhost:3000/api/users
+Browse http://localhost:3000/api/yourentities
 Done!.
 
 This is my first node script so be patient, if there is someone wants to help,
@@ -86,8 +92,8 @@ solve bugs etc.. you are welcome.
 godgavemerest was created by [Oscar J. Rico] [http://www.oscarrico.net] 
 from [Datavox S.A.S] (http://www.datavox.com.co)
 
-Please contribute by [reporting bugs](godgavemerest/issues) and 
-submitting [pull requests](godgavemerest/pulls).
+Please contribute by [reporting bugs](/issues) and 
+submitting [pull requests](/pulls).
 
 ##License (MIT)
 

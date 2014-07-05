@@ -40,6 +40,17 @@ with any money or support.
 
 ##USAGE
 
+Create empty folder, inith your node js application and install required modules.
+
+```
+npm init
+npm install godgavemerest
+npm install express
+npm install seqeulize
+npm install lodash 
+npm install mysql
+```
+
 Create a build.js at your root folder.
 ```
 (function (){
@@ -53,7 +64,7 @@ config = {
   schema: 'yourschema',
   dbPort: 3306,
   dialect: 'mysql',
-  //Do not change this - ////////
+  //Do not change this  ////////
   modelsPath : './models/',
   routesPath : './routes/',
   serverPath : './', 
@@ -68,20 +79,20 @@ config = {
 godgavemerest.run(null);
 
 }).call(this)
-
 ```
 
-Then run the script from the command line:
+Execute your script build.js to generate all files.
+```node build```
 
-``` node build.js ```
-
-That's it. You will have a very basic rest service running. (I hope).
+After script create all files you can press control +c
 
 Then you will like to run your server with:
 
-``` node app.js ```
+```node app ```
 
-Browse http://localhost:3000/api/yourentities
+That's it. You will have a very basic rest service running. (I hope).
+Go to your browser  http://localhost:3000/api/yourentity
+
 Done!.
 
 This is my first node script so be patient, if there is someone wants to help,

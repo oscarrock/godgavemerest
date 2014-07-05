@@ -103,8 +103,8 @@ solve bugs etc.. you are welcome.
 godgavemerest was created by [Oscar J. Rico] [http://www.oscarrico.net] 
 from [Datavox S.A.S] (http://www.datavox.com.co)
 
-Please contribute by [reporting bugs](/issues) and 
-submitting [pull requests](/pulls).
+Please contribute by [reporting bugs](https://github.com/oscarrock/godgavemerest/issues) and 
+submitting [pull requests](https://github.com/oscarrock/godgavemerest/pulls).
 
 ##License (MIT)
 

@@ -54,7 +54,7 @@ npm install mysql
 Create a build.js at your root folder.
 ```
 (function (){
-var restGenerator = require('godgavemerest')
+var godgavemerest = require('godgavemerest')
 config = { 
   //Setup your Database Connection
   database: 'mydb', 

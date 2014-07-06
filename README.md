@@ -49,6 +49,8 @@ npm install express
 npm install sequelize
 npm install lodash 
 npm install mysql
+npm install cors
+npm install body-parser
 ```
 
 Create a build.js at your root folder.

@@ -1,2 +1,6 @@
 node_modules
 /build.js
+/config/
+/models/
+/routes/
+/app.js

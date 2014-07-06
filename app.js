@@ -7,11 +7,13 @@ var express = require('express')
   , db      = require('./models')
   , cors = require('cors')
   
+var bodyParser = require('body-parser')
 var app = module.exports = express(); 
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json())      
 app.use(cors());
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-        
 var routes = require('./routes/routeConfig');
 
 app.set('port', process.env.PORT || 3000)

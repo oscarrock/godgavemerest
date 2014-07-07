@@ -161,9 +161,9 @@ module.exports = {
                         //We dont like to add our pk on these crud ops.
                     } else {
                         if (routeCreateParams !== '')
-                            routeCreateParams += ',' + util.format("\n{ %s: req.body.%s }", field, field);
+                            routeCreateParams += ',' + util.format("\n %s: req.body.%s ", field, field);
                         else
-                            routeCreateParams += util.format("\n{ %s: req.body.%s }", field, field);
+                            routeCreateParams += util.format("\n %s: req.body.%s ", field, field);
                         
                         if (routeUpdateParams !== '')
                             routeUpdateParams += ',' + util.format("\n %s: req.body.%s ", field, field);

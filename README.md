@@ -27,7 +27,7 @@ The script generates the following files:
     /routes/entityroute..1
     /routes/entityroute..n
 
-    /config/config.jsson
+    /config/config.json
     
     /app.js
 
@@ -93,7 +93,7 @@ Then you will like to run your server with:
 ```node app ```
 
 That's it. You will have a very basic rest service running. (I hope).
-Go to your browser  http://localhost:3000/api/yourentity
+Go to your browser  http://localhost:3000/api/your_table
 
 Done!.
 
@@ -102,15 +102,12 @@ solve bugs etc.. you are welcome.
 
 ##Credits
 
-godgavemerest was created by [Oscar J. Rico] [http://www.oscarrico.net] 
-from [QARTZ S.A.S] (http://www.qartz.co)
+godgavemerest was created by [Oscar J. Rico] [http://gone] 
 
 Please contribute by [reporting bugs](https://github.com/oscarrock/godgavemerest/issues) and 
 submitting [pull requests](https://github.com/oscarrock/godgavemerest/pulls).
 
 ##License (MIT)
-
-Copyright © 2014 QARTZ S.A.S
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
 files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, 

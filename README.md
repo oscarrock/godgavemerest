@@ -103,14 +103,14 @@ solve bugs etc.. you are welcome.
 ##Credits
 
 godgavemerest was created by [Oscar J. Rico] [http://www.oscarrico.net] 
-from [Datavox S.A.S] (http://www.datavox.com.co)
+from [QARTZ S.A.S] (http://www.qartz.co)
 
 Please contribute by [reporting bugs](https://github.com/oscarrock/godgavemerest/issues) and 
 submitting [pull requests](https://github.com/oscarrock/godgavemerest/pulls).
 
 ##License (MIT)
 
-Copyright © 2014 Datavox S.A.S
+Copyright © 2014 QARTZ S.A.S
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
 files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, 
